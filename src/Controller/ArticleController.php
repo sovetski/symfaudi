@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Article;
 use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,13 +22,16 @@ class ArticleController extends AbstractController
             'articles' => $articles,
         ]);
     }
+
     /**
-     * @Route("/article", name="app_article")
+     * @Route("/article/{id}", name="app_article", methods="GET")
+     * @param Article $article
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function article()
+    public function show(Article $article)
     {
         return $this->render('article/article.html.twig', [
-            'controller_name' => 'ArticleController',
+            'article' => $article,
         ]);
     }
 }

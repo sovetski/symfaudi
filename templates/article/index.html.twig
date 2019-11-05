@@ -12,7 +12,7 @@
         {% for article in articles %}
         <article>
 
-            <a href="article.html">
+            <a href="{{ path('app_article', {id: article.id}) }}">
 
                 <figure>
 
