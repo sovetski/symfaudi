@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Nouvel article{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mt-5">
+                <h1>Ajouter un nouvel article</h1>
+                {{ include('static_page/index.html.twig', {action: 'Créer', class: 'btn btn-primary'}) }}
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+{% endblock %}
