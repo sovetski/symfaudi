@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\ArticleRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -9,11 +10,15 @@ class ArticleController extends AbstractController
 {
     /**
      * @Route("/", name="app_index")
+     * @param ArticleRepository $repository
+     * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function index()
+    public function index(ArticleRepository $repository)
     {
+        $articles = $repository->findALl();
+
         return $this->render('article/index.html.twig', [
-            'controller_name' => 'ArticleController',
+            'articles' => $articles,
         ]);
     }
     /**
