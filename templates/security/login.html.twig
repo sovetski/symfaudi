@@ -21,13 +21,14 @@
         {% endif %}
 
         <fieldset>
-            <label for="inputEmail">Email</label>
-        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+            <legend><label for="inputEmail">Email</label></legend>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
         </fieldset>
         <fieldset>
-        <label for="inputPassword">Password</label>
-        <input type="password" name="password" id="inputPassword" class="form-control" required>
+            <legend><label for="inputPassword">Password</label></legend>
+            <input type="password" name="password" id="inputPassword" class="form-control" required>
         </fieldset>
+
         <input type="hidden" name="_csrf_token"
                value="{{ csrf_token('authenticate') }}"
         >
