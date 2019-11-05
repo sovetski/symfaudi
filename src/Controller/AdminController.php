@@ -48,6 +48,52 @@ class AdminController extends AbstractController
         ]);
     }
 
+    /**
+     * @Route("/article/{id}/edit", name="_article_edit", requirements={"id": "\d+"}, methods={"GET", "POST"})
+     * @param Request $request
+     * @param Article $article
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
+     */
+    public function editArticle(Request $request, Article $article)
+    {
+        $form = $this->createForm(ArticleType::class, $article, [
+            'full' => false,
+        ]);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()){
+            return $this->persistArticle($article, 'L\'article à bien été modifié !');
+        }
+
+        return $this->render('admin/article.edit.html.twig', [
+            'form' => $form->createView(),
+            'article' => $article,
+        ]);
+    }
+
+    /**
+     * @Route("/article/{id}/delete", name="_article_delete", requirements={"id": "\d+"}, methods={"GET", "POST"})
+     * @param Article $article
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse
+     */
+    public function deleteArticle(Article $article)
+    {
+        return $this->removeArticle($article, 'L\'article à bien été supprimé !');
+    }
+
+    private function removeArticle(Article $article, string $message)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($article);
+        $em->flush();
+
+        $this->addFlash('success', $message);
+
+        return $this->redirectToRoute('app_index');
+    }
+
     private function persistArticle(Article $article, string $message)
     {
 

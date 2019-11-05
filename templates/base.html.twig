@@ -10,9 +10,7 @@
     {% endblock %}
 </head>
 <body>
-
 <!-- HEADER - START -->
-
 <header>
 
     <figure class="logo">
@@ -47,6 +45,13 @@
 </header>
 
 <!-- HEADER - END -->
+{% for label, messages in app.flashes %}
+{% for message in messages %}
+    <div class="alert alert-{{ label }}">
+        {{ message }}
+    </div>
+{% endfor %}
+{% endfor %}
 
 {% block body %}{% endblock %}
 

@@ -10,6 +10,25 @@ body {
     -moz-box-shadow: inset 0px 0px 30px 0px rgba(0,0,0,0.5);
     box-shadow: inset 0px 0px 30px 0px rgba(0,0,0,0.5);
   }
+
+.alert {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  color: white;
+}
+.alert.alert-success {
+  background-color: #4CAF50;
+}
+.alert.alert-danger {
+  background-color: #f44336;
+}
+.alert.alert-warning {
+  background-color: #ff9800;
+}
+.alert.alert-info {
+  background-color: #2196F3;
+}
 /* ----------------------------------------------------------------- HEADER ----------------------------------------------------------------- */
   header {
     display: flex;
