@@ -28,17 +28,17 @@
 
         <ul>
 
-            <li class="active"><a href="{{ path('app_index') }}">Accueil</a></li>
-            <li><a href="{{ path('app_contact') }}">Contact</a></li>
-            <li><a href="{{ path('app_about') }}">À propos</a></li>
+            <li {{ app.request.get('_route') == "app_index" ? 'class="active"'}}><a href="{{ path('app_index') }}">Accueil</a></li>
+            <li {{ app.request.get('_route') == "app_contact" ? 'class="active"'}}><a href="{{ path('app_contact') }}">Contact</a></li>
+            <li {{ app.request.get('_route') == "app_about" ? 'class="active"'}}><a href="{{ path('app_about') }}">À propos</a></li>
             {% if is_granted('ROLE_ADMIN') %}
-                <li><a href="{{ path('app_admin_index') }}">ADMIN</a></li>
+                <li {{ app.request.get('_route') == "app_admin_index" ? 'class="active"'}}><a href="{{ path('app_admin_index') }}">ADMIN</a></li>
             {% endif %}
             {% if app.user %}
                     <li><a href="{{ url('app_logout') }}">Déconnexion</a></li>
                 {% else %}
-                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
-                    <li><a href="{{ path('app_register') }}">Inscription</a></li>
+                    <li {{ app.request.get('_route') == "app_login" ? 'class="active"'}}><a href="{{ path('app_login') }}">Connexion</a></li>
+                    <li {{ app.request.get('_route') == "app_register" ? 'class="active"'}}><a href="{{ path('app_register') }}">Inscription</a></li>
                 {% endif %}
         </ul>
 
