@@ -10,7 +10,7 @@ section.page-form form {
 section.page-form form fieldset {
     margin-bottom: 20px;
 }
-section.page-form form input, section form textarea {
+section.page-form form input:not([type="checkbox"]), section form textarea {
     width: 100%;
     padding: 15px;
     box-sizing: border-box;
