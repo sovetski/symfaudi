@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Administration{% endblock %}
+
+{% block body %}
+
+    <!-- SECTION - START -->
+
+    <section class="page-form">
+
+        <h2>Administration</h2>
+
+        <form action="#" method="POST">
+
+            <fieldset>
+                <legend><label>Articles</label></legend>
+                <a class="btn" href="{{ path('app_admin_new_article') }}">Ajouter un nouvel article</a>
+            </fieldset>
+
+            <fieldset>
+                <legend><label>À venir</label></legend>
+                <a class="btn" href="#">Bientot disponible</a>
+            </fieldset>
+
+        </form>
+
+    </section>
+
+    <!-- SECTION - END -->
+{% endblock %}
