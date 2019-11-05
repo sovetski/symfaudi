@@ -14,8 +14,13 @@
         <div class="article-images">
 
             <img src="{{ article.imageUrl }}" alt="{{ article.title }}">
+
+            {% if is_granted('ROLE_ADMIN') %}
+
             <a class="btn" href="{{ path('app_admin_article_edit', {id: article.id}) }}">[ Modifier ]</a>
             <a class="btn" href="{{ path('app_admin_article_delete', {id: article.id}) }}">[ Supprimer ]</a>
+
+            {% endif %}
 
         </div>
 
