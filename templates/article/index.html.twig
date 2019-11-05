@@ -1,20 +1,176 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ArticleController!{% endblock %}
+{% block title %}Nos articles{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <!-- SECTION - START -->
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <section>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/stagiaire/Documents/PHP/Atelier/symfaudi/src/Controller/ArticleController.php'|file_link(0) }}">src/Controller/ArticleController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/stagiaire/Documents/PHP/Atelier/symfaudi/templates/article/index.html.twig'|file_link(0) }}">templates/article/index.html.twig</a></code></li>
-    </ul>
-</div>
+        <h2>Nos gammes</h2>
+
+        <article>
+
+            <a href="article.html">
+
+                <figure>
+
+                    <div class="image">
+
+                        <img src="assets/img/voiture1.jpg" title="Audi s5 2018" alt="Audi s5 2018">
+
+                    </div>
+
+                    <figcaption>
+
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+
+                    </figcaption>
+
+                </figure>
+
+            </a>
+
+        </article>
+
+        <article>
+
+            <a href="article.html">
+
+                <figure>
+
+                    <div class="image">
+
+                        <img src="assets/img/voiture2.jpg" title="Audi r8 2006" alt="Audi r8 2006">
+
+                    </div>
+
+                    <figcaption>
+
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+
+                    </figcaption>
+
+                </figure>
+
+            </a>
+
+        </article>
+
+        <article>
+
+            <a href="article.html">
+
+                <figure>
+
+                    <div class="image">
+
+                        <img src="assets/img/voiture3.jpg" title="Audi rs6 2019" alt="Audi rs6 2019">
+
+                    </div>
+
+                    <figcaption>
+
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+
+                    </figcaption>
+
+                </figure>
+
+            </a>
+
+        </article>
+
+        <article>
+
+            <a href="article.html">
+
+                <figure>
+
+                    <div class="image">
+
+                        <img src="assets/img/voiture4.jpg" title="Audi q2 2016" alt="Audi q2 2016">
+
+                    </div>
+
+                    <figcaption>
+
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+
+                    </figcaption>
+
+                </figure>
+
+            </a>
+
+        </article>
+
+        <article>
+
+            <a href="article.html">
+
+                <figure>
+
+                    <div class="image">
+
+                        <img src="assets/img/voiture5.jpg" title="Audi a5 2019" alt="Audi rs5 2019">
+
+                    </div>
+
+                    <figcaption>
+
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+
+                    </figcaption>
+
+                </figure>
+
+            </a>
+
+        </article>
+
+        <article>
+
+            <a href="article.html">
+
+                <figure>
+
+                    <div class="image">
+
+                        <img src="assets/img/voiture6.jpg" title="Audi tt 2019" alt="Audi tt 2019">
+
+                    </div>
+
+                    <figcaption>
+
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+
+                    </figcaption>
+
+                </figure>
+
+            </a>
+
+        </article>
+
+        <!-- PAGINATION - START -->
+
+        <nav class="pagination">
+
+            <ul>
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+
+        </nav>
+
+        <!-- PAGINATION - END -->
+
+    </section>
+
+    <!-- SECTION - END -->
 {% endblock %}

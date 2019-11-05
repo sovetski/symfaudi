@@ -1,0 +1,372 @@
+/* ----------------------------------------------------------------- GENERAL ----------------------------------------------------------------- */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    min-height:100vh;
+    background-color: #a8a8a8;
+    -webkit-box-shadow: inset 0px 0px 30px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0px 0px 30px 0px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 30px 0px rgba(0,0,0,0.5);
+  }
+/* ----------------------------------------------------------------- HEADER ----------------------------------------------------------------- */
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d2d2d;
+    width: 100%;
+    height: 250px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+  }
+  header .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 215px;
+  }
+  header .logo img {
+    width: 300px;
+  }
+  header .logo figcaption {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 7px;
+    font-weight: bold;
+    font-size: 50px;
+    color: white;
+    margin-left: 20px;
+  }
+  header nav {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    margin-right: 215px;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+  }
+  header nav ul li {
+    position: relative;
+    cursor: pointer;
+  }
+  header nav ul li:hover::after, header nav ul li.active::after {
+    content: '';
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ff0024;
+  }
+  header nav a {
+    display: block;
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    outline: 0;
+  }
+  /* ----------------------------------------------------------------- CONTENT ----------------------------------------------------------------- */
+  section {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: #fff;
+    width: auto;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+  section > h2 {
+    grid-column-start: span 3;
+    width: 20%;
+    margin-left: 40%;
+    margin-right: 40%;
+    padding-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #555;
+    border-bottom: 2px solid #ffc60f;
+  }
+  section article {
+    width:  500px;
+    max-width: 500px;
+    height: 370px;
+    min-height: 370px;
+    max-height: 370px;
+  }
+  section article a {
+    text-decoration: none;
+    outline: 0;
+  }
+  section article figure {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    transition: transform .2s;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+  }
+  section article figure:hover {
+    transform: scale(1.1);
+  }
+  section article figure .image {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+  }
+  section article figure .image::after {
+    content: '';
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffc60f;
+  }
+  section article figure .image img {
+    width:  100%;
+    max-width: 100%;
+    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
+  }
+  section article figure figcaption {
+    font-family: 'Oswald', sans-serif;
+    background-color: #2d2d2d;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    height: 30px;
+    min-height: 30px;
+    max-height: 30px;
+  }
+  section article figure figcaption h2 {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+  }
+  /* ----------------------------------------------------------------- FOOTER ----------------------------------------------------------------- */
+  footer {
+    background-color: #2d2d2d;
+    color: white;
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+  }
+  footer .footer-cols {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
+    align-items: center;
+    margin-top: 50px;
+  }
+  footer .footer-cols .footer-col {
+    font-family: 'Oswald', sans-serif;
+    flex: 0 0 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  footer .footer-cols .footer-col span {
+    display: block;
+    width: 50%;
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid red;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  footer .footer-cols .footer-col ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+  }
+  footer .footer-cols .footer-col ul li {
+    margin: 5px;
+  }
+  footer .footer-cols .footer-col a {
+    text-decoration: none;
+    color: white;
+  }
+  footer .footer-copyright {
+    color: #a8a8a8;
+    text-align: center;
+    font-size: 12px;
+  }
+
+  /* ----------------------------------------------------------------- PAGINATION ----------------------------------------------------------------- */
+section nav.pagination {
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  grid-column-start: span 3;
+}
+section nav.pagination ul {
+ display: flex;
+ flex-direction: row;
+ padding: 0;
+ margin-top: 30px;
+ justify-content: center;
+ 
+}
+section nav.pagination ul li {
+  list-style: none;
+  padding: 10px;
+  color: black;
+  background-color: black;
+  border: 1px solid #a8a8a8;
+  transition: transform .2s;
+  -webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.5);
+}
+section nav.pagination ul li a {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  outline: 0;
+}
+section nav.pagination ul li.active, section nav.pagination ul li:hover {
+  background-color: orange;
+  transform: scale(0.9);
+}
+section nav.pagination ul li.active a, section nav.pagination ul li:hover a {
+  color: black;   
+}
+  /* -------------------------------------------------------------- RESPONSIVE -------------------------------------------------------------- */
+
+  /* ----------------------------------------------------------- TABLET AND DESKTOP ----------------------------------------------------------- */
+
+  @media screen and (max-width: 1560px) {
+
+    /* -------------------------------------------------------------- HEADER TABLET -------------------------------------------------------------- */
+
+    header {
+      flex-direction: column;
+      height: auto;
+    }
+
+    header .logo {
+      flex-direction: column;
+      margin: 0;
+    }
+
+    header .logo figcaption {
+      display: none;
+      margin-left: 0;
+    }
+
+    header nav {
+      margin-right: 0;
+      margin-top: 15px;
+    }
+
+    /* -------------------------------------------------------------- CONTENT TABLET -------------------------------------------------------------- */
+
+    section {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 0;
+      margin: 0;
+    }
+
+    section > h2, section nav.pagination {
+      grid-column-start: span 2;
+    }
+
+
+  }
+
+  /* ----------------------------------------------------------------- MOBILE ----------------------------------------------------------------- */
+
+  @media screen and (max-width: 767px) {
+
+    /* -------------------------------------------------------------- HEADER MOBILE -------------------------------------------------------------- */
+
+    header .logo figcaption {
+      display: none;
+      margin-left: 0;
+    }
+
+    header nav {
+      margin-right: 0;
+      margin-top: 15px;
+    }
+
+    header nav ul li:hover::after, header nav ul li.active::after {
+      width: 50%;
+      left: 25%;
+      right: 25%;
+      bottom: 15px;
+  }
+
+  /* ------------------------------------------------------------- CONTENT MOBILE  ------------------------------------------------------------- */
+
+  section {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 0;
+      margin: 0;
+  }
+
+  section > h2, section nav.pagination {
+    grid-column-start: unset;
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  section article {
+      width: 400px;
+      max-width: 400px;
+      height: 350px;
+      min-height: 350px;
+      max-height: 350px;
+  }
+
+  section article figure .image {
+      height: 250px;
+      min-height: 250px;
+      max-height: 250px;
+  }
+
+  section article figure .image img {
+      height: 250px;
+      min-height: 250px;
+      max-height: 250px;
+  }
+
+  section article figure figcaption {
+    height: auto;
+    min-height: auto;
+    max-height: none;
+  }
+
+}

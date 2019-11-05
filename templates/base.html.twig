@@ -1,12 +1,116 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome !{% endblock %}</title>
+    {% block stylesheets %}
+        <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/style.css">
+    {% endblock %}
+</head>
+<body>
+
+<!-- HEADER - START -->
+
+<header>
+
+    <figure class="logo">
+        <img src="assets/img/logo.svg" alt="logo d'Audi">
+        <figcaption>
+            BLOG
+        </figcaption>
+    </figure>
+
+    <nav>
+
+        <ul>
+
+            <li class="active"><a href="index.html">Accueil</a></li>
+            <li><a href="forum.html">Forum</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">À propos</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- HEADER - END -->
+
+{% block body %}{% endblock %}
+
+<!-- FOOTER - START -->
+
+<footer>
+
+    <div class="footer-cols">
+
+        <div class="footer-col">
+
+            <span>Le Lorem Ipsum ?</span>
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Liens Partenaires</a></li>
+                    <li><a href="#">Goodies</a></li>
+                    <li><a href="#">Crédits</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+        <div class="footer-col">
+
+            <span>Pourquoi l'utiliser ?</span>
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="#">Plan du site</a></li>
+                    <li><a href="#">Maison de la Presse</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#">RSS</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+        <div class="footer-col">
+
+            <span>D'où vient-il ?</span>
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="newcar.html">Ajouter véhicule</a></li>
+                    <li><a href="#">Liens Partenaires</a></li>
+                    <li><a href="#">Goodies</a></li>
+                    <li><a href="#">Crédits</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+    <div class="footer-copyright">Copyright 2019 ©</div>
+
+</footer>
+
+<!-- FOOTER - END -->
+
+{% block javascripts %}{% endblock %}
+</body>
 </html>
