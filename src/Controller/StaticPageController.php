@@ -16,4 +16,13 @@ class StaticPageController extends AbstractController
             'controller_name' => 'StaticPageController',
         ]);
     }
+    /**
+     * @Route("/about", name="app_about")
+     */
+    public function about()
+    {
+        return $this->render('static_page/about.html.twig', [
+            'controller_name' => 'StaticPageController',
+        ]);
+    }
 }
